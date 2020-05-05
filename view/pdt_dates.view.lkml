@@ -1,7 +1,7 @@
 view: pdt_dates {
   derived_table: {
     publish_as_db_view: yes
-    sql_trigger_value: 1 ;;
+    sql_trigger_value: SELECT 1 ;;
     sql:
     WITH pdtTable AS (
 SELECT '2020/05/02' AS dates,'Amal Gill' AS customer_name,242 AS order_id,19.74 AS quantity,'Largs' AS city
