@@ -202,7 +202,8 @@ SELECT '2020/02/11','Stewart Lindsay',204,8.33,'North Jakarta'
 UNION ALL
 SELECT '2020/03/21','Acton Wood',208,15.54,'Hexham'
 UNION ALL
-SELECT '2020/04/23','Quinn Paul',224,18.87,'Tullibody'
-    ;;
+SELECT '2020/04/23','Quinn Paul',224,18.87,'Tullibody')
+
+SELECT * FROM pdtTable;;
   }
 }
