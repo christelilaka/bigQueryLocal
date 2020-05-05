@@ -1,3 +1,4 @@
+explore: pdt_dates {}
 view: pdt_dates {
   derived_table: {
     publish_as_db_view: yes
@@ -18,7 +19,7 @@ SELECT '2020/02/18','Jasper Finch',162,11.06,'Edmundston'
 UNION ALL
 SELECT '2020/02/22','Hedley Stephenson',287,17.42,'Saint-Dié-des-Vosges'
 UNION ALL
-SELECT '2020/01/02','Colton Mcguire',144,7.90,'Villanova d''Albenga'
+SELECT '2020/01/02','Colton Mcguire',144,7.90,'Villanova Albenga'
 UNION ALL
 SELECT '2020/04/29','Lewis Townsend',169,10.35,'Gojra'
 UNION ALL
@@ -132,7 +133,7 @@ SELECT '2020/04/23','Tyrone Estrada',121,11.04,'Knittelfeld'
 UNION ALL
 SELECT '2020/03/18','Garrison Nieves',156,7.05,'Kidwelly'
 UNION ALL
-SELECT '2020/01/22','Kuame Santos',262,14.21,'San Polo d''Enza'
+SELECT '2020/01/22','Kuame Santos',262,14.21,'San Polo Enza'
 UNION ALL
 SELECT '2020/02/22','Emerson Frost',149,5.05,'Frignano'
 UNION ALL
@@ -206,4 +207,12 @@ SELECT '2020/04/23','Quinn Paul',224,18.87,'Tullibody')
 
 SELECT * FROM pdtTable;;
   }
+
+
+  dimension: customer_name{}
+  dimension: order_id {}
+  dimension: quantity{}
+  dimension:city{}
+
+  dimension: dates {}
 }
