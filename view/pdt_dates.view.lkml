@@ -195,13 +195,15 @@ SELECT '2020-04-03','Nero Knapp',297,11.42,'Aptent Taciti Sociosqu PC'
 UNION ALL
 SELECT '2020-01-20','Tarik Hayden',205,5.97,'Fringilla Mi Lacinia Company'
 UNION ALL
-SELECT '2020-03-30','Reese Larson',269,12.04,'Vel Pede Limited'
+SELECT '2019-12-29','Reese Larson',269,12.04,'Vel Pede Limited'
 UNION ALL
 SELECT '2020-03-01','Chancellor Avila',283,17.87,'Scelerisque Lorem Ipsum Institute'
 UNION ALL
-SELECT '2020-02-11','Lyle Watkins',119,17.08,'Sodales Limited'
+SELECT '2019-12-26','Lyle Watkins',119,17.08,'Sodales Limited'
 UNION ALL
-SELECT '2020-02-04','Wyatt Duffy',197,18.13,'Malesuada Augue Ut Inc.')
+SELECT '2020-02-04','Wyatt Duffy',197,18.13,'Malesuada Augue Ut Inc.'
+UNION ALL
+SELECT '2020-05-06','Lyle Watkins',112,17.08,'Sodales Limited')
 
 SELECT * FROM pdtTable;;
   }
@@ -219,7 +221,11 @@ SELECT * FROM pdtTable;;
     sql: PARSE_DATE('%Y-%m-%d', ${TABLE}.dates) ;;
   }
 
-  dimension: week_of_theYear {
+  dimension: friday_week {
     sql: EXTRACT(WEEK(FRIDAY) FROM ${dates_date}) ;;
+  }
+
+  dimension: monday_week {
+    sql: EXTRACT(ISOWEEK FROM ${dates_date}) ;;
   }
 }
