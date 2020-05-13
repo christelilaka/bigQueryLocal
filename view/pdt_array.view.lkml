@@ -1,11 +1,11 @@
 explore: pdt_array {
   sql_always_where:
   {% if pdt_array.and_filter._is_filtered %}
-  ${and_color}
+    ${and_color}
   {% elsif pdt_array.or_and_filter._is_filtered %}
-  ${or_and_color}
+    ${or_and_color}
   {% else %}
-  1=1
+    1=1
   {% endif %}
   ;;
 }
@@ -31,13 +31,13 @@ SELECT * FROM myArray
 
   parameter: and_filter {
     label: "AND filter logic"
-    description: "the AND operator must be in upercase like: Yellow AND Green"
+    description: "the AND operator must be in uppercase like: Yellow AND Green"
     type: string
   }
 
   parameter: or_and_filter {
     label: "AND and OR Filter logic"
-    description: "enter values like: Green AND Yeellow OR Mauv"
+    description: "enter values like: Green AND Yellow OR Mauv"
     type: string
   }
 
@@ -61,3 +61,8 @@ SELECT * FROM myArray
   dimension: colors {}
 
  }
+
+
+datagroup: bigquery {
+  sql_trigger: SELECT CURRENT_DATE ;;
+}
